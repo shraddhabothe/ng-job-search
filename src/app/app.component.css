@@ -1,5 +1,5 @@
 body {
-    font-family:sans-serif; 
+    font-family:Arial, Helvetica, sans-serif; 
   }
 .container {
   padding-left: 25px;
@@ -55,9 +55,10 @@ body {
     cursor: pointer;
     padding: 14px 16px;
     font-size: 30px;
-    width: 45%;
+    width: 46%;
   }
 
   img {
     width: 100px;
+    
   }

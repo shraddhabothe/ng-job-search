@@ -1,8 +1,10 @@
 <div class="container">
-    <div class="header"><h1>Find Your Job</h1></div>
-    <div class="tabs">
+    <div class="header">
+        <h1>Find Your Job</h1>
+    </div>
+    <div class="tab">
         <button class="tablinks" (click)="tabNavigate('job-list')">List of Jobs</button>
-        <button class="tablinks left" (click)="tabNavigate('job-favorite')">Favourite Jobs</button>
+        <button class="tablinks" (click)="tabNavigate('job-favorite')">Favourite Jobs</button>
     </div>
     <router-outlet></router-outlet>
 </div>
