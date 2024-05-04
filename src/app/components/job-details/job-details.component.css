@@ -1,0 +1,27 @@
+svg {
+    height: 45px;
+    width: 45px;
+    cursor:pointer;
+    padding-top: 35px;
+    color:rgba(218, 70, 85, 0.871);
+}
+
+.button{
+  background-color: rgb(83, 3, 3);
+  color: white;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .span{
+    display: inline-block;
+    color: white;
+    padding: 10px 20px;
+    font-family: Arial;
+    border-radius: 25px;
+    background-color: #f07808;
+    margin-top: 10px;
+}

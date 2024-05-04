@@ -1,0 +1,16 @@
+img {
+    width: 100px;
+    height: 100px;
+}
+
+svg {
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+}
+
+.color-select{
+    color: rgb(216, 112, 160);
+    fill: rgb(120, 243, 137);
+}
+
