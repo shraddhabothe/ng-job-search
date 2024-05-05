@@ -16,8 +16,10 @@ export class JobService {
 
   constructor(private http: HttpClient,private cookieService: CookieService) {
     const preferredJobData=this.cookieService.get('preferredJob');
-    const preferredData = JSON.parse(preferredJobData);
-    this.preferredJob =  preferredData;
+    if(null!=preferredJobData && ""!=preferredJobData){
+      const preferredData = JSON.parse(preferredJobData);
+      this.preferredJob =  preferredData;  
+    }
    }
 
   featch() {
