@@ -71,9 +71,15 @@ export class JobListComponent implements OnInit {
       this.jobService.selectedJobList.push(job);
       this.jobService.duplicateList = this.jobService.selectedJobList;
       //this.jobService.preferredJob = this.jobService.selectedJobList;
+      const set = new Set<JobData>();
       this.jobService.selectedJobList.forEach(job=>{
+        set.add(job);
         this.jobService.preferredJob.push(job);
       });
+      this.jobService.preferredJob.forEach(job=>{
+        set.add(job);
+      });
+      this.jobService.preferredJob=[...set];
     } 
     else {
       for(let i = 0; i < this.jobService.selectedJobList.length ; i++){
@@ -91,9 +97,15 @@ export class JobListComponent implements OnInit {
         }
         this.jobService.selectedJobList = this.jobService.duplicateList;
         //this.jobService.preferredJob = this.jobService.selectedJobList;
+        const set = new Set<JobData>();
         this.jobService.selectedJobList.forEach(job=>{
+          set.add(job);
           this.jobService.preferredJob.push(job);
         });
+        this.jobService.preferredJob.forEach(job=>{
+          set.add(job);
+        });
+        this.jobService.preferredJob=[...set];
       }
       this.cookieService.set('preferredJob', JSON.stringify(this.jobService.preferredJob));
   }
