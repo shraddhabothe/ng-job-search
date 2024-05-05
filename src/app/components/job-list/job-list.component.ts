@@ -90,10 +90,10 @@ export class JobListComponent implements OnInit {
           }
         }
         this.jobService.selectedJobList = this.jobService.duplicateList;
+        //this.jobService.preferredJob = this.jobService.selectedJobList;
         this.jobService.selectedJobList.forEach(job=>{
           this.jobService.preferredJob.push(job);
         });
-        //this.jobService.preferredJob = this.jobService.selectedJobList;
       }
       this.cookieService.set('preferredJob', JSON.stringify(this.jobService.preferredJob));
   }
